@@ -50,7 +50,7 @@ languageRouter
     try {
       const words = await LanguageService.getNextWord(
         req.app.get('db'),
-        req.language.head,
+        req.language.id,
       )
       res.json({
         nextWord: words[0].original,
@@ -106,6 +106,7 @@ languageRouter
         totalScore: ll.total_score,
         answer,
         isCorrect,
+        guess,
       })
     } catch (error) {
       next(error)

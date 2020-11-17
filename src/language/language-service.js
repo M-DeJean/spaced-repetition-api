@@ -42,7 +42,7 @@ const LanguageService = {
     ll.id = language.id;
     ll.name = language.name;
     ll.total_score = language.total_score;
-    // console.log('LangHead:',language.head);
+    console.log('LangHead:',language.head);
     let word = words.find(w => w.id === language.head)
     ll.insertFirst({
       id: word.id,
@@ -64,7 +64,7 @@ const LanguageService = {
       })
     }
     
-    // console.log(JSON.stringify(ll,null,2));
+    console.log(JSON.stringify(ll,null,2));
     return ll
   },
 
