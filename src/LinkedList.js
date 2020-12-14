@@ -126,7 +126,6 @@ class LinkedList {
         return currNode;
     }
     moveHeadBy(level) {
-        console.log(level, '----------------------')
         let head = this.head;
         this.head = this.head.next;
         this.insertAt(level, head.value)
